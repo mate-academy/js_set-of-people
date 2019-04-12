@@ -39,6 +39,29 @@
  */
 function setOfPeople(people) {
   // write code here
+  let peopleInRoom = new Set();
+  people.forEach((element) => {
+    if (peopleInRoom.has(element)) {
+      peopleInRoom.delete(element);
+    } else {
+      peopleInRoom.add(element);
+    }
+  });
+  return peopleInRoom;
 }
 
 module.exports = setOfPeople;
+
+// function setOfPeople(people) {
+//   // write code here
+//   let temp = new Set();
+//
+//   people.forEach((item) => {
+//     if (temp.has(item)) {
+//       temp.delete(item);
+//     } else {
+//       temp.add(item);
+//     }
+//   });
+//   return temp;
+// }
