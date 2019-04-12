@@ -39,8 +39,8 @@
  */
 function setOfPeople(people) {
   // write code here
-  let currentlyInRoom = new Set();
-  console.log(people);
+  const currentlyInRoom = new Set();
+
   people.forEach(function(person) {
     currentlyInRoom.has(person)
       ? currentlyInRoom.delete(person)
