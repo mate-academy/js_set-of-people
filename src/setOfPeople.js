@@ -39,6 +39,18 @@
  */
 function setOfPeople(people) {
   // write code here
+  const currentlyInRoom = new Set();
+
+  people.forEach(function(person) {
+    currentlyInRoom.has(person)
+      ? currentlyInRoom.delete(person)
+      : currentlyInRoom.add(person);
+  });
+  return currentlyInRoom;
 }
+
+setOfPeople([23, 23, 23, 23]);
+setOfPeople([1, 3, 2, 1, 2, 1]);
+setOfPeople([3, 1, 8, 8, 2, 1, 9, 0, 3, 6, 9, 1, 5, 0, 2, 0, 1, 8, 5, 7]);
 
 module.exports = setOfPeople;
