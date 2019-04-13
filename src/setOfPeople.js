@@ -1,6 +1,6 @@
 'use strict';
 
-/**
+/*
  * Implement setOfPeople function:
  *
  * You are given an array of numbers. Each of the numbers represents a person. A
@@ -37,8 +37,20 @@
  *
  * @return {Set}
  */
-function setOfPeople(people) {
-  // write code here
+function setOfPeople(people = []) {
+  const uniquePeople = [];
+  const whoStayed = person => {
+    let newPerson = true;
+    if (uniquePeople.includes(person)) {
+      uniquePeople.splice(uniquePeople.indexOf(person), 1);
+      newPerson = !newPerson;
+    } else if (uniquePeople.indexOf(person) === -1 && newPerson) {
+      uniquePeople.push(person);
+    }
+  };
+  people.map(whoStayed);
+  const setOfPeople = new Set(uniquePeople);
+  return setOfPeople;
 }
 
 module.exports = setOfPeople;
