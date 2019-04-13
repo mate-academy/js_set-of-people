@@ -38,7 +38,7 @@
  * @return {Set}
  */
 function setOfPeople(people) {
-  let roomWithPeople = new Set();
+  const roomWithPeople = new Set();
   people.forEach(person => {
     if (roomWithPeople.has(person)) {
       roomWithPeople.delete(person);
