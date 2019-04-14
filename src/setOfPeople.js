@@ -39,13 +39,13 @@
  */
 function setOfPeople(people) {
   let peopleLeft = new Set();
-  for (let elem of people) {
+  people.forEach(elem => {
     if (!peopleLeft.has(elem)) {
       peopleLeft.add(elem);
     } else {
       peopleLeft.delete(elem);
     }
-  }
+  });
   return peopleLeft;
 }
 
