@@ -38,7 +38,7 @@
  * @return {Set}
  */
 function setOfPeople(people) {
-  let peopleLeft = new Set();
+  const peopleLeft = new Set();
   people.forEach(elem => {
     if (!peopleLeft.has(elem)) {
       peopleLeft.add(elem);
