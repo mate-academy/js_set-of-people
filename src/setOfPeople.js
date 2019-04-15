@@ -41,10 +41,10 @@ function setOfPeople(people) {
   let peopleInside = new Set();
   if (people.length > 0) {
     for (let id of people) {
-      if (!peopleInside.has(id)) {
-        peopleInside.add(id);
-      } else {
+      if (peopleInside.has(id)) {
         peopleInside.delete(id);
+      } else {
+        peopleInside.add(id);
       }
     }
   }
