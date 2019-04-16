@@ -39,7 +39,7 @@
  */
 function setOfPeople(people) {
   let set = new Set();
-  people.map((el) => {
+  people.forEach((el) => {
     return set.has(el) ? set.delete(el) : set.add(el);
   });
   return set;
