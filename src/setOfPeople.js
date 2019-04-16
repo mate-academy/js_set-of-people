@@ -39,15 +39,14 @@
  */
 function setOfPeople(people) {
   const uniquePeople = people.reduce((arrayOfPeople, person) => {
-    if (arrayOfPeople.includes(person)) {
-      arrayOfPeople.splice(arrayOfPeople.indexOf(person), 1);
+    if (arrayOfPeople.has(person)) {
+      arrayOfPeople.delete(person);
       return arrayOfPeople;
-    } else if (arrayOfPeople.indexOf(person) === -1) {
-      arrayOfPeople.push(person);
+    } else if (!arrayOfPeople.has(person)) {
+      arrayOfPeople.add(person);
     }
     return arrayOfPeople;
-  }, []);
-  const setOfPeople = new Set(uniquePeople);
-  return setOfPeople;
+  }, new Set());
+  return uniquePeople;
 }
 module.exports = setOfPeople;
