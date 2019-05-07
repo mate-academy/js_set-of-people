@@ -40,7 +40,11 @@
 function setOfPeople(people) {
   const room = new Set();
   people.forEach(item => {
-    !room.has(item) ? room.add(item) : room.delete(item, 1);
+    if (room.has(item)) {
+      room.delete(item);
+    } else {
+      room.add(item);
+    }
   });
   return room;
 }
