@@ -38,6 +38,11 @@
  * @return {Set}
  */
 function setOfPeople(people) {
+  const result = new Set();
+  for (const num of people) {
+    (result.has(num)) ? result.delete(num) : result.add(num);
+  }
+  return result;
   // write code here
 }
 
