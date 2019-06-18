@@ -1,5 +1,4 @@
 'use strict';
-
 /**
  * Implement setOfPeople function:
  *
@@ -37,8 +36,11 @@
  *
  * @return {Set}
  */
-function setOfPeople(people) {
-  // write code here
-}
-
+const setOfPeople = (people) => {
+  const peopleInside = new Set();
+  people.forEach((elem) => {
+    peopleInside.has(elem) ? peopleInside.delete(elem) : peopleInside.add(elem);
+  });
+  return ([...peopleInside]);
+};
 module.exports = setOfPeople;
