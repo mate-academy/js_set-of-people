@@ -39,6 +39,20 @@
  */
 function setOfPeople(people) {
   // write code here
+  let result = [];
+  people.forEach((item) => {
+    if (result.indexOf(item) === -1) {
+      result.push(item);
+    } else {
+      result = result.filter((val) => {
+        return val !== item;
+      });
+    }
+  });
+
+  console.log(result);
+
+  return result;
 }
 
 module.exports = setOfPeople;
