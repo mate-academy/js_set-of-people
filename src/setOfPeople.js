@@ -41,16 +41,16 @@ function setOfPeople(people) {
   if (people.length === 0 || people.length === 1) {
     return people;
   }
-  const set = new Set();
+  const setPeople = new Set();
   for (const i in people) {
-    if (set.has(people[i])) {
-      set.delete(people[i]);
+    if (setPeople.has(people[i])) {
+      setPeople.delete(people[i]);
     } else {
-      set.add(people[i]);
+      setPeople.add(people[i]);
     }
   }
-  console.log(set);
-  return set;
+  console.log(setPeople);
+  return setPeople;
 }
 
 module.exports = setOfPeople;
