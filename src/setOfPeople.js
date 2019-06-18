@@ -39,18 +39,15 @@
  */
 function setOfPeople(people) {
   // write code here
-  let result = [];
-  people.forEach((item) => {
-    if (result.indexOf(item) === -1) {
-      result.push(item);
+  const result = new Set();
+
+  people.forEach((humanNumber) => {
+    if (result.has(humanNumber)) {
+      result.delete(humanNumber);
     } else {
-      result = result.filter((val) => {
-        return val !== item;
-      });
+      result.add(humanNumber);
     }
   });
-
-  console.log(result);
 
   return result;
 }
