@@ -40,9 +40,13 @@
 const setOfPeople = (people) => {
   const set = new Set();
 
-  people.forEach(
-    item => set.has(item) ? set.delete(item) : set.add(item)
-  );
+  people.forEach(item => {
+    if (set.has(item)) {
+      set.delete(item);
+    } else {
+      set.add(item);
+    }
+  });
 
   return set;
 };
