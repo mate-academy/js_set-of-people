@@ -41,6 +41,6 @@ const setOfPeople = (people) => {
   people.forEach((elem) => {
     peopleInside.has(elem) ? peopleInside.delete(elem) : peopleInside.add(elem);
   });
-  return ([...peopleInside]);
+  return peopleInside;
 };
 module.exports = setOfPeople;
