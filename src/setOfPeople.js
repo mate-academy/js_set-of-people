@@ -41,7 +41,6 @@ function setOfPeople(people) {
   // write code here
   const setOfRoom = new Set();
   for (const value of people) {
-    console.log(value);
     if (setOfRoom.has(value)) {
       setOfRoom.delete(value);
     } else {
