@@ -38,18 +38,17 @@
  * @return {Set}
  */
 function setOfPeople(people) {
-  if (people.length === 0 || people.length === 1) {
+  if (people.length <= 1) {
     return people;
   }
   const setPeople = new Set();
-  for (const i in people) {
+  people.forEach((person, i) => {
     if (setPeople.has(people[i])) {
       setPeople.delete(people[i]);
     } else {
       setPeople.add(people[i]);
     }
-  }
-  console.log(setPeople);
+  });
   return setPeople;
 }
 
