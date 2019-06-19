@@ -39,9 +39,9 @@
  */
 function setOfPeople(people) {
   // write code here
-  return people.reduce(function(prev, curr, i) {
+  return people.reduce(function(prev, curr) {
     if (!prev.has(curr)) {
-      prev.add(curr, i);
+      prev.add(curr);
     } else {
       prev.delete(curr);
     }
