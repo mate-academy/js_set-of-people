@@ -48,5 +48,4 @@ function setOfPeople(people) {
   });
   return peopleSet;
 }
-
 module.exports = setOfPeople;
