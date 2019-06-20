@@ -39,7 +39,7 @@
  */
 function setOfPeople(people) {
   const setPeople = new Set();
-  const callback = user => {
+  const peopleInTheRoom = user => {
     if (setPeople.has(user)) {
       setPeople.delete(user);
     } else {
@@ -47,7 +47,7 @@ function setOfPeople(people) {
     }
   };
 
-  people.forEach(callback);
+  people.forEach(peopleInTheRoom);
 
   return setPeople;
 }
