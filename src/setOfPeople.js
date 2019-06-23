@@ -39,11 +39,11 @@
  */
 function setOfPeople(people) {
   const peopleCurrentlyInRoom = new Set();
-  for (const key in people) {
-    if (peopleCurrentlyInRoom.has(people[key])) {
-      peopleCurrentlyInRoom.delete(people[key]);
+  for (const value of people) {
+    if (peopleCurrentlyInRoom.has(value)) {
+      peopleCurrentlyInRoom.delete(value);
     } else {
-      peopleCurrentlyInRoom.add(people[key]);
+      peopleCurrentlyInRoom.add(value);
     }
   }
   return peopleCurrentlyInRoom;
