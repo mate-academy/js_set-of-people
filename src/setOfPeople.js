@@ -38,7 +38,17 @@
  * @return {Set}
  */
 function setOfPeople(people) {
-  // write code here
+  let peopleInside = new Set();
+  if (people.length > 0) {
+    for (let id of people) {
+      if (peopleInside.has(id)) {
+        peopleInside.delete(id);
+      } else {
+        peopleInside.add(id);
+      }
+    }
+  }
+  return peopleInside;
 }
 
 module.exports = setOfPeople;
