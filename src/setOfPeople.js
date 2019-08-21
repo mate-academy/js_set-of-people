@@ -42,7 +42,7 @@ function setOfPeople(people) {
 
   const peopleInRoomFilters = peopleInRoom.filter((uniqPerson) => {
     const count = people.reduce((acc, person) => {
-      (uniqPerson === person) ? acc + 1 : acc;
+      acc = (uniqPerson === person) ? acc + 1 : acc;
 
       return acc;
     }, 0);
