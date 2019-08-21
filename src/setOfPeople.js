@@ -38,7 +38,11 @@
  * @return {Set}
  */
 function setOfPeople(people) {
-  // write code here
+  return new Set([...new Set(people.reverse())]
+    .reverse()
+    .filter(person => people
+      .reduce((counter, item) =>
+        item === person ? counter + 1 : counter, 0) % 2));
 }
 
 module.exports = setOfPeople;
