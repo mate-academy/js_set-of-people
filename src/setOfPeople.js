@@ -39,6 +39,17 @@
  */
 function setOfPeople(people) {
   // write code here
+  const accumOfPeople = new Set();
+
+  for (let i = 0; i < people.length; i++) {
+    if (accumOfPeople.has(people[i])) {
+      accumOfPeople.delete(people[i]);
+    } else {
+      accumOfPeople.add(people[i]);
+    }
+  }
+
+  return accumOfPeople;
 }
 
 module.exports = setOfPeople;
