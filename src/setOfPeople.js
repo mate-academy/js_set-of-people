@@ -38,7 +38,32 @@
  * @return {Set}
  */
 function setOfPeople(people) {
-  // write code here
+  const set = new Set(people);
+  const peopleInRoom = [];
+
+  set.forEach(person => {
+    let counter = 0;
+
+    for (let pos = 0; pos < people.length;) {
+      const foundPos = people.indexOf(person, pos);
+
+      if (foundPos === -1) {
+        break;
+      }
+
+      pos = foundPos + 1;
+      counter++;
+    }
+
+    if (counter % 2 !== 0) {
+      peopleInRoom.push(person);
+    }
+  });
+
+  const resultSet = new Set(peopleInRoom
+    .sort((a, b) => people.lastIndexOf(a) - people.lastIndexOf(b)));
+
+  return resultSet;
 }
 
 module.exports = setOfPeople;
