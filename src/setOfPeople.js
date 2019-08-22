@@ -40,7 +40,9 @@
 function setOfPeople(people) {
   const contPeople = new Set();
 
-  people.map(x => contPeople.has(x) ? contPeople.delete(x) : contPeople.add(x));
+  people.forEach(person =>
+    contPeople.has(person) ? contPeople.delete(person) : contPeople.add(person)
+  );
   return contPeople;
 }
 
