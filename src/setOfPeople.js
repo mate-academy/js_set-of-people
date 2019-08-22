@@ -38,12 +38,15 @@
  * @return {Set}
  */
 function setOfPeople(people) {
-  const setPeople = new Set();
+  const resultSet = new Set();
 
-  people.filter((item) => {
-    return setPeople.has(item) ? setPeople.delete(item) : setPeople.add(item);
+  people.filter((person) => {
+    return resultSet.has(person)
+      ? resultSet.delete(person)
+      : resultSet.add(person);
   });
-  return setPeople;
+
+  return resultSet;
 }
 
 module.exports = setOfPeople;
