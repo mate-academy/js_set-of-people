@@ -38,20 +38,14 @@
  * @return {Set}
  */
 function setOfPeople(people) {
-  const presentPeople = [...people];
+  const presentPeople = new Set();
 
-  let i = 0;
-  while (i < presentPeople.length) {
-    const couple = presentPeople.indexOf(presentPeople[i], i + 1);
-    if (couple > 0) {
-      presentPeople.splice(couple, 1);
-      presentPeople.splice(i, 1);
-    } else {
-      i++;
-    }
-  }
+  people
+    .forEach(item => presentPeople.has(item)
+      ? presentPeople.delete(item)
+      : presentPeople.add(item));
 
-  return new Set(presentPeople);
+  return presentPeople;
 }
 
 module.exports = setOfPeople;
