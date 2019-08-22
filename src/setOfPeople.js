@@ -41,12 +41,10 @@ function setOfPeople(people) {
   const set = new Set();
 
   for (let i = 0; i < people.length; i++) {
-    if (people.filter(elem => elem === people[i]).length % 2 === 1) {
-      if (set.has(people[i])) {
-        set.delete(people[i]);
-      } else {
-        set.add(people[i]);
-      }
+    if (set.has(people[i])) {
+      set.delete(people[i]);
+    } else {
+      set.add(people[i]);
     }
   }
 
