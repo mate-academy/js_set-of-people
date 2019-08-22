@@ -37,20 +37,16 @@
  *
  * @return {Set}
  */
+
 function setOfPeople(people) {
-  const peopleInRoom = [...new Set(people.reverse())].reverse();
+  const peopleInRoom = new Set();
 
-  const peopleInRoomFilters = peopleInRoom.filter((uniqPerson) => {
-    const count = people.reduce((acc, person) => {
-      acc = (uniqPerson === person) ? acc + 1 : acc;
-
-      return acc;
-    }, 0);
-
-    return (count % 2 !== 0);
+  people.forEach(person => {
+    (peopleInRoom.has(person)) ? peopleInRoom.delete(person)
+      : peopleInRoom.add(person);
   });
 
-  return new Set(peopleInRoomFilters);
+  return peopleInRoom;
 }
 
 module.exports = setOfPeople;
