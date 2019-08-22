@@ -39,8 +39,8 @@
  */
 function setOfPeople(people) {
   const peopleSet = new Set();
-  people.forEach(item => {
-    peopleSet.has(item) === true ? peopleSet.delete(item) : peopleSet.add(item);
+  people.forEach(man => {
+    peopleSet.has(man) === true ? peopleSet.delete(man) : peopleSet.add(man);
   });
 
   return peopleSet;
