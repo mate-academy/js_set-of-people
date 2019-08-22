@@ -40,11 +40,11 @@
 function setOfPeople(people) {
   const setPeopleInRoom = new Set();
 
-  for (const person of people) {
+  people.forEach(person => {
     setPeopleInRoom.has(person)
       ? setPeopleInRoom.delete(person)
       : setPeopleInRoom.add(person);
-  }
+  });
   return setPeopleInRoom;
 }
 module.exports = setOfPeople;
