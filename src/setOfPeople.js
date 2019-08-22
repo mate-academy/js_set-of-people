@@ -1,18 +1,17 @@
 'use strict';
 
 function setOfPeople(array) {
-  const onlyOdd = [];
+  const uniquePeopleSet = new Set();
 
-  array.forEach(el => {
-    let count = 0; array.forEach(compareEl => {
-      if (el === compareEl) { count++; };
-    });
-    if (count % 2 !== 0) { onlyOdd.unshift(el); }
+  array.forEach(person => {
+    if (uniquePeopleSet.has(person)) {
+      uniquePeopleSet.delete(person);
+    } else {
+      uniquePeopleSet.add(person);
+    }
   });
-  const enteredPeopleSet = new Set(onlyOdd);
-  const enteredPeopleArray = [...enteredPeopleSet].reverse();
 
-  return enteredPeopleArray;
+  return uniquePeopleSet;
 }
 
 module.exports = setOfPeople;
