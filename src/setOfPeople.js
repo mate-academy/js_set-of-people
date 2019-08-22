@@ -39,13 +39,13 @@
  */
 function setOfPeople(people) {
   const resultSet = new Set();
-  for (let i = 0; i < people.length; i++) {
-    if (resultSet.has(people[i]) === true) {
-      resultSet.delete(people[i]);
+  people.forEach(function(item) {
+    if (resultSet.has(item) === true) {
+      resultSet.delete(item);
     } else {
-      resultSet.add(people[i]);
+      resultSet.add(item);
     }
-  }
+  });
   return resultSet;
 }
 
