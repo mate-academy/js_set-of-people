@@ -39,15 +39,13 @@
  */
 function setOfPeople(people) {
   const uniquePeoples = new Set();
-
-  for (let i = 0; i < people.length; i++) {
-    if (uniquePeoples.has(people[i])) {
-      uniquePeoples.delete(people[i]);
+  people.forEach(item => {
+    if (uniquePeoples.has(item)) {
+      uniquePeoples.delete(item);
+    } else {
+      uniquePeoples.add(item);
     }
-    else {
-      uniquePeoples.add(people[i]);
-    }
-  }
+  });
   return [...uniquePeoples];
 }
 
