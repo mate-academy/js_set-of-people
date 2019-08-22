@@ -46,7 +46,7 @@ function setOfPeople(people) {
       : peopleInRoom.add(people[i]);
   }
 
-  return [...peopleInRoom];
+  return peopleInRoom;
 }
 
 module.exports = setOfPeople;
