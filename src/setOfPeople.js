@@ -40,7 +40,7 @@
 function setOfPeople(people) {
   const resultSet = new Set();
 
-  people.filter((person) => {
+  people.forEach((person) => {
     return resultSet.has(person)
       ? resultSet.delete(person)
       : resultSet.add(person);
