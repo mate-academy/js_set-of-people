@@ -38,11 +38,11 @@
  * @return {Set}
  */
 function setOfPeople(people) {
-  return people.reduce((resultSet, item) => {
-    if (resultSet.has(item)) {
-      resultSet.delete(item);
+  return people.reduce((resultSet, person) => {
+    if (resultSet.has(person)) {
+      resultSet.delete(person);
     } else {
-      resultSet.add(item);
+      resultSet.add(person);
     }
 
     return resultSet;
