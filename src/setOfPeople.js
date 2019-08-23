@@ -40,10 +40,10 @@
 function setOfPeople(people) {
   const peopleInRoom = new Set();
 
-  people.forEach((guest) => {
-    peopleInRoom.has(guest)
-      ? peopleInRoom.delete(guest)
-      : peopleInRoom.add(guest);
+  people.forEach((person) => {
+    peopleInRoom.has(person)
+      ? peopleInRoom.delete(person)
+      : peopleInRoom.add(person);
   });
 
   return peopleInRoom;
