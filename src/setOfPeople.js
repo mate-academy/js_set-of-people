@@ -39,13 +39,13 @@
  */
 function setOfPeople(people) {
   const result = new Set();
-  for (const person of people) {
+  people.forEach(person => {
     if (result.has(person)) {
       result.delete(person);
     } else {
       result.add(person);
     }
-  };
+  });
 
   return result;
 }
