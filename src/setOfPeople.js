@@ -40,11 +40,11 @@
 function setOfPeople(people) {
   const result = new Set();
 
-  for (const value of people) {
-    if (!result.has(value)) {
-      result.add(value);
+  for (const person of people) {
+    if (!result.has(person)) {
+      result.add(person);
     } else {
-      result.delete(value);
+      result.delete(person);
     }
   }
   return result;
