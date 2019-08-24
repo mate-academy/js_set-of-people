@@ -39,10 +39,10 @@
  */
 function setOfPeople(people) {
   const peopleInRoom = new Set();
-  people.forEach((inOut) =>
-    peopleInRoom.has(inOut)
-      ? peopleInRoom.delete(inOut)
-      : peopleInRoom.add(inOut));
+  people.forEach((men) =>
+    peopleInRoom.has(men)
+      ? peopleInRoom.delete(men)
+      : peopleInRoom.add(men));
   return peopleInRoom;
 }
 
