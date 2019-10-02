@@ -39,14 +39,7 @@
  */
 function setOfPeople(people) {
   const room = new Set();
-
-  for (let i = 0; i < people.length; i++) {
-    if (room.has(people[i])) {
-      room.delete(people[i]);
-    } else {
-      room.add(people[i]);
-    }
-  }
+  people.forEach(e => room.has(e) ? room.delete(e) : room.add(e));
 
   return room;
 }
