@@ -43,13 +43,12 @@ function setOfPeople(peopleList) {
 
   peopleList.forEach( item => {
 
-      if (set.has(item)) {
-        set.delete(item);
-      } else {
-        set.add(item);
-      }
+    if (set.has(item)) {
+      set.delete(item);
+    } else {
+      set.add(item);
     }
-  )
+  });
 
   return set;
 }
