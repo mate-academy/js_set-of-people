@@ -33,12 +33,19 @@
  * setOfPeople([1, 3, 2, 1, 2, 1]) === new Set(3, 1)
  * setOfPeople([1, 1]) === new Set()
  *
- * @param {number[]} people
+ * @param {number[]} arr
  *
  * @return {Set}
  */
-function setOfPeople(people) {
-  // write code here
+function setOfPeople(arr) {
+  const personInRoom = new Set();
+
+  for (const i in arr) {
+    personInRoom.has(arr[i])
+      ? personInRoom.delete(arr[i])
+      : personInRoom.add(arr[i]);
+  }
+  return personInRoom;
 }
 
 module.exports = setOfPeople;
