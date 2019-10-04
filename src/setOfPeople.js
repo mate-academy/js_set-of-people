@@ -38,15 +38,15 @@
  * @return {Set}
  */
 function setOfPeople(people) {
-  for (let i = 0; i < people.length; i++) {
-    const positOfSimillar = people.indexOf(people[i], i + 1);
-    if (positOfSimillar > 0) {
-      people.splice(i, 1);
-      people.splice(positOfSimillar - 1, 1);
-      --i;
+  const set = new Set();
+  for (const person of people) {
+    if (set.has(person)) {
+      set.delete(person);
+    } else {
+      set.add(person);
     }
   }
-  return new Set(people);
+  return set;
 }
 
 module.exports = setOfPeople;
