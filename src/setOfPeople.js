@@ -39,7 +39,6 @@
  */
 function setOfPeople(people) {
   const set = new Set();
-
   for (const item of people) {
     if (set.has(item)) {
       set.delete(item);
