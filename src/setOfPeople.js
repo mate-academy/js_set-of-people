@@ -48,7 +48,7 @@ function setOfPeople(people) {
     }
   }
 
-  return [...visitors];
+  return visitors;
 }
 
 module.exports = setOfPeople;
