@@ -48,7 +48,7 @@ function setOfPeople(people) {
     };
   }
 
-  return [ ...inRoom ];
+  return new Set([ ...inRoom ]);
 }
 
 module.exports = setOfPeople;
