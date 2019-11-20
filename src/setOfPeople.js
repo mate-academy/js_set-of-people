@@ -38,7 +38,13 @@
  * @return {Set}
  */
 function setOfPeople(people) {
-  // write code here
+  const room = [];
+
+  people.map(
+    x => room.includes(x) ? room.splice(room.indexOf(x), 1) : room.push(x)
+  );
+
+  return new Set(room);
 }
 
 module.exports = setOfPeople;
