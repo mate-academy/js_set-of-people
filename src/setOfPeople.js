@@ -39,11 +39,7 @@
  */
 function setOfPeople(people) {
   const players = new Set();
-  people.map(i =>
-    players.has(i)
-      ? players.delete(i)
-      : players.add(i));
-
+  people.map(i => players.has(i) ? players.delete(i) : players.add(i));
   return players;
 }
 
