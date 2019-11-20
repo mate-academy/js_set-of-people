@@ -38,13 +38,13 @@
  * @return {Set}
  */
 function setOfPeople(people) {
-  const room = [];
+  const room = new Set();
 
-  people.map(
-    x => room.includes(x) ? room.splice(room.indexOf(x), 1) : room.push(x)
+  people.forEach(
+    x => room.has(x) ? room.delete(x) : room.add(x)
   );
 
-  return new Set(room);
+  return room;
 }
 
 module.exports = setOfPeople;
