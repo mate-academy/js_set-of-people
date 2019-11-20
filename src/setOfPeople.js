@@ -38,7 +38,15 @@
  * @return {Set}
  */
 function setOfPeople(people) {
-  // write code here
+  const result = [];
+  for (const i of people) {
+    if (result.includes(i)) {
+      result.splice(result.indexOf(i), 1);
+      continue;
+    }
+    result.push(i);
+  }
+  return result;
 }
 
 module.exports = setOfPeople;
