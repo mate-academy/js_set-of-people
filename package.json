@@ -1,4 +1,7 @@
 {
+  "jest": {
+    "testEnvironment": "node"
+  },
   "name": "set-of-people",
   "version": "1.0.0",
   "description": "Set of people",
