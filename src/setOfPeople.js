@@ -38,13 +38,13 @@
  * @return {Set}
  */
 function setOfPeople(people) {
-  const result = [];
+  const result = new Set();
   for (const i of people) {
-    if (result.includes(i)) {
-      result.splice(result.indexOf(i), 1);
+    if (result.has(i)) {
+      result.delete(i);
       continue;
     }
-    result.push(i);
+    result.add(i);
   }
   return result;
 }
