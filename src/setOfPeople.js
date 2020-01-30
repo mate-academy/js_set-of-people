@@ -41,10 +41,10 @@ function setOfPeople(people) {
   const peopleSet = new Set();
 
   people.forEach(person => {
-    if (!peopleSet.has(person)) {
-      peopleSet.add(person);
-    } else {
+    if (peopleSet.has(person)) {
       peopleSet.delete(person);
+    } else {
+      peopleSet.add(person);
     }
   });
 
