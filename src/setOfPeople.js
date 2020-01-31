@@ -40,17 +40,11 @@
 function setOfPeople(people) {
   const room = new Set();
 
-  for (let i = 0; i < people.length; i++) {
-    if (room.has(people[i])) {
-      room.delete(people[i]);
-    } else {
-      room.add(people[i]);
-    }
-  }
+  people.forEach((item) =>
+    room.has(item) ? room.delete(item) : room.add(item)
+  );
 
   return room;
 }
-
-setOfPeople([1, 3, 2, 1, 2, 1]);
 
 module.exports = setOfPeople;
