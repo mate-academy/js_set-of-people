@@ -40,7 +40,7 @@
 function setOfPeople(people) {
   const result = new Set();
 
-  people.forEach((person, i, arr) => {
+  people.forEach(person => {
     if (result.has(person)) {
       result.delete(person);
     } else {
