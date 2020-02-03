@@ -46,8 +46,6 @@ function setOfPeople(people) {
     } else {
       mySet.add(element);
     }
-
-    return mySet;
   });
 
   return mySet;
