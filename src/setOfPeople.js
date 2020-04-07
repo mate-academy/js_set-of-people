@@ -39,6 +39,19 @@
  */
 function setOfPeople(people) {
   // write code here
+  const result = [];
+  const peoples = [...people];
+  const str = peoples.join('-');
+
+  [...new Set(peoples.reverse())].forEach(el => {
+    const pattern = new RegExp(`\\b${el}\\b`, 'g');
+
+    if (str.match(pattern).length % 2 !== 0) {
+      result.unshift(el);
+    }
+  });
+
+  return result;
 }
 
 module.exports = setOfPeople;
