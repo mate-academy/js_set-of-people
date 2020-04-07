@@ -40,10 +40,10 @@
 function setOfPeople(people) {
   const room = new Set();
 
-  people.map(a => {
-    return room.has(a)
-      ? room.delete(a)
-      : room.add(a);
+  people.map(person => {
+    return room.has(person)
+      ? room.delete(person)
+      : room.add(person);
   });
 
   return room;
