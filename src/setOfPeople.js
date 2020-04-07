@@ -39,9 +39,8 @@
  */
 function setOfPeople(people) {
   const result = new Set();
-  const arrOfPeople = [...people];
 
-  arrOfPeople.forEach(value => {
+  people.forEach(value => {
     result.has(value)
       ? result.delete(value)
       : result.add(value);
