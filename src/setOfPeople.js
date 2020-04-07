@@ -38,7 +38,17 @@
  * @return {Set}
  */
 function setOfPeople(people) {
-  // write code here
+  const personsIn = [];
+
+  people.forEach(person => {
+    if (personsIn.includes(person)) {
+      personsIn.splice(personsIn.indexOf(person), 1);
+    } else {
+      personsIn.push(person);
+    }
+  });
+
+  return new Set(personsIn);
 }
 
 module.exports = setOfPeople;
