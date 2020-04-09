@@ -39,6 +39,17 @@
  */
 function setOfPeople(people) {
   // write code here
+  const cloub = new Set();
+
+  people.forEach(p => {
+    if (cloub.has(p)) {
+      cloub.delete(p);
+    } else {
+      cloub.add(p);
+    }
+  });
+
+  return cloub;
 }
 
 module.exports = setOfPeople;
