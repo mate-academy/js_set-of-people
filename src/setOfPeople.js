@@ -36,6 +36,7 @@
  * @param {number[]} people
  *
  * @return {Set}
+ *
  */
 function setOfPeople(people) {
   const result = new Set();
