@@ -38,17 +38,17 @@
  * @return {Set}
  */
 function setOfPeople(people) {
-  const result = [];
+  const result = new Set();
 
   for (let i = 0; i < people.length; i++) {
-    if (result.indexOf(people[i]) === -1) {
-      result.push(people[i]);
+    if (!result.has(people[i])) {
+      result.add(people[i]);
     } else {
-      result.splice(result.indexOf(people[i]), 1);
+      result.delete(people[i]);
     }
   }
 
-  return new Set(result);
+  return result;
 }
 
 module.exports = setOfPeople;
