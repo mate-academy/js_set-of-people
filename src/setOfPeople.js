@@ -39,6 +39,17 @@
  */
 function setOfPeople(people) {
   // write code here
+  const setPeople = new Set();
+
+  for (let i = 0; i < people.length; i++) {
+    if (setPeople.has(people[i])) {
+      setPeople.delete(people[i]);
+    } else {
+      setPeople.add(people[i]);
+    }
+  }
+
+  return setPeople;
 }
 
 module.exports = setOfPeople;
