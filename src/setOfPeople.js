@@ -39,6 +39,7 @@
  */
 function setOfPeople(people) {
   // write code here
+  console.log(people);
 }
 
 module.exports = setOfPeople;
