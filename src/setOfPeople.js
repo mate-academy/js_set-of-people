@@ -40,9 +40,9 @@
 function setOfPeople(people) {
   const set = new Set();
 
-  for (const person of people) {
+  people.forEach(person => {
     set.has(person) ? set.delete(person) : set.add(person);
-  }
+  });
 
   return set;
 }
