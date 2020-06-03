@@ -38,7 +38,11 @@
  * @return {Set}
  */
 function setOfPeople(people) {
-  // write code here
+  return people.reduce((room, person) => {
+    room.has(person) ? room.delete(person) : room.add(person);
+
+    return room;
+  }, new Set());
 }
 
 module.exports = setOfPeople;
