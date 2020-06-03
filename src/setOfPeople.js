@@ -38,7 +38,17 @@
  * @return {Set}
  */
 function setOfPeople(people) {
-  // write code here
-}
+  const res = [];
+  const l = people.length - 1;
 
+  for (let i = l; i >= 0; i--) {
+    const accum = people.filter(item => item === people[i]).length;
+
+    if (accum % 2 === 1 && !res.includes(people[i])) {
+      res.unshift(people[i]);
+    }
+  }
+
+  return new Set(res);
+}
 module.exports = setOfPeople;
