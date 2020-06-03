@@ -38,17 +38,11 @@
  * @return {Set}
  */
 function setOfPeople(people) {
-  const res = [];
-  const l = people.length - 1;
+  const peopleInRoom = new Set();
 
-  for (let i = l; i >= 0; i--) {
-    const accum = people.filter(item => item === people[i]).length;
+  people.forEach(person => peopleInRoom.has(person)
+    ? peopleInRoom.delete(person) : peopleInRoom.add(person));
 
-    if (accum % 2 === 1 && !res.includes(people[i])) {
-      res.unshift(people[i]);
-    }
-  }
-
-  return new Set(res);
+  return peopleInRoom;
 }
 module.exports = setOfPeople;
