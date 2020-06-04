@@ -39,6 +39,15 @@
  */
 function setOfPeople(people) {
   // write code here
+  const room = new Set();
+
+  for (const person of people) {
+    if (!room.delete(person)) {
+      room.add(person);
+    }
+  }
+
+  return room;
 }
 
 module.exports = setOfPeople;
