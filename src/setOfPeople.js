@@ -41,7 +41,11 @@ function setOfPeople(people) {
   const result = new Set();
 
   for (const num of people) {
-    result.has(num) ? result.delete(num) : result.add(num);
+    if (result.has(num)) {
+      result.delete(num);
+    } else {
+      result.add(num);
+    };
   }
 
   return result;
