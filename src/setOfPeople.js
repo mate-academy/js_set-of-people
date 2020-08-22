@@ -38,18 +38,13 @@
  * @return {Set}
  */
 function setOfPeople(people) {
-  const mapCollection = new Map();
   const setCollection = new Set();
 
   people.forEach(element => {
-    mapCollection.set(element, people.filter(el => el === element).length);
+    setCollection.has(element)
+      ? setCollection.delete(element)
+      : setCollection.add(element);
   });
-
-  for (const key of mapCollection) {
-    if (key[1] % 2 !== 0) {
-      setCollection.add(key[0]);
-    }
-  }
 
   return setCollection;
 }
