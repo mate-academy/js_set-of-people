@@ -42,8 +42,8 @@ function setOfPeople(people) {
 
   people.forEach((person) =>
     peopleInRoom.has(person)
-    ? peopleInRoom.delete(person)
-    : peopleInRoom.add(person));
+      ? peopleInRoom.delete(person)
+      : peopleInRoom.add(person));
 
   return peopleInRoom;
 }
