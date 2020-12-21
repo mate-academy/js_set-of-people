@@ -40,11 +40,11 @@
 function setOfPeople(people) {
   const setWithPeople = new Set();
 
-  for (let i = 0; i < people.length; i++) {
-    if (setWithPeople.has(people[i])) {
-      setWithPeople.delete(people[i]);
+  for (const person of people) {
+    if (setWithPeople.has(person)) {
+      setWithPeople.delete(person);
     } else {
-      setWithPeople.add(people[i]);
+      setWithPeople.add(person);
     }
   }
 
