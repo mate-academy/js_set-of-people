@@ -33,12 +33,18 @@
  * setOfPeople([1, 3, 2, 1, 2, 1]) === new Set(3, 1)
  * setOfPeople([1, 1]) === new Set()
  *
- * @param {number[]} people
+ * @param {number[]} people array of people who have entered the room.
  *
- * @return {Set}
+ * @return {Set} a Set object that contains the people currently in the room.
  */
 function setOfPeople(people) {
-  // write code here
+  const result = new Set();
+
+  people.filter(person => result.has(person)
+    ? result.delete(person)
+    : result.add(person));
+
+  return result;
 }
 
 module.exports = setOfPeople;
