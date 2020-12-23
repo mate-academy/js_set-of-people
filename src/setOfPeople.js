@@ -38,7 +38,17 @@
  * @return {Set}
  */
 function setOfPeople(people) {
-  // write code here
+  const queue = new Set();
+
+  for (const person of people) {
+    if (queue.has(person)) {
+      queue.delete(person);
+    } else {
+      queue.add(person);
+    }
+  }
+
+  return queue;
 }
 
 module.exports = setOfPeople;
