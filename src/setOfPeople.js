@@ -38,7 +38,14 @@
  * @return {Set}
  */
 function setOfPeople(people) {
-  // write code here
+  const arr = [];
+
+  people.map(item =>
+    (!arr.includes(item)
+      ? arr.push(item)
+      : arr.splice(arr.indexOf(item), 1)));
+
+  return new Set(arr);
 }
 
 module.exports = setOfPeople;
