@@ -38,17 +38,17 @@
  * @return {Set}
  */
 function setOfPeople(people) {
-  const peopleQueue = [];
+  const peopleQueue = new Set();
 
   people.forEach(person => {
-    if (peopleQueue.includes(person)) {
-      peopleQueue.splice(peopleQueue.indexOf(person), 1);
+    if (peopleQueue.has(person)) {
+      peopleQueue.delete(person);
     } else {
-      peopleQueue.push(person);
+      peopleQueue.add(person);
     };
   });
 
-  return new Set(peopleQueue);
+  return peopleQueue;
 };
 
 module.exports = setOfPeople;
