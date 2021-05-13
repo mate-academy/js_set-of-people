@@ -41,13 +41,7 @@ function setOfPeople(people) {
   // write code here
   const result = new Set();
 
-  for (const i of people) {
-    if (result.has(i)) {
-      result.delete(i);
-      continue;
-    }
-    result.add(i);
-  }
+  people.map(el => result.has(el) ? result.delete(el) : result.add(el));
 
   return result;
 }
