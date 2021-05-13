@@ -39,6 +39,11 @@
  */
 function setOfPeople(people) {
   // write code here
+  const result = new Set();
+
+  people.map(el => result.has(el) ? result.delete(el) : result.add(el));
+
+  return result;
 }
 
 module.exports = setOfPeople;
