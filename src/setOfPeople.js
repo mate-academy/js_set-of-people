@@ -38,7 +38,20 @@
  * @return {Set}
  */
 function setOfPeople(people) {
-  // write code here
+  const peopleCount = {};
+  const result = new Set();
+
+  for (const human of people) {
+    peopleCount[human] = (peopleCount[human] || 0) + 1;
+  }
+
+  for (const key in peopleCount) {
+    if (peopleCount[key] % 2 === 1) {
+      result.add(+key);
+    }
+  }
+
+  return result;
 }
 
 module.exports = setOfPeople;
