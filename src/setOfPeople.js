@@ -38,7 +38,17 @@
  * @return {Set}
  */
 function setOfPeople(people) {
-  // write code here
+  const room = new Set();
+
+  people.forEach((elem, elemCopy) => {
+    if (!room.has(elem)) {
+      room.add(elem);
+    } else {
+      room.delete(elem);
+    }
+  });
+
+  return room;
 }
 
 module.exports = setOfPeople;
