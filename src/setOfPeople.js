@@ -39,6 +39,14 @@
  */
 function setOfPeople(people) {
   // write code here
+  return people.reduce(function(prev, curr) {
+    if (!prev.has(curr)) {
+      prev.add(curr);
+    } else {
+      prev.delete(curr);
+    }
+    return prev;
+  }, new Set());
 }
 
 module.exports = setOfPeople;
