@@ -38,19 +38,15 @@
  * @return {Set}
  */
 function setOfPeople(people) {
-  const playersArray = [];
+  const playersSet = new Set();
 
   for (const player of people) {
-    if (playersArray.includes(player)) {
-      const removeIndex = playersArray.indexOf(player);
+    playersSet.has(player)
+      ? playersSet.delete(player)
+      : playersSet.add(player);
+  };
 
-      playersArray.splice(removeIndex, 1);
-    } else {
-      playersArray.push(player);
-    }
-  }
-
-  return new Set(playersArray);
+  return playersSet;
 }
 
 module.exports = setOfPeople;
