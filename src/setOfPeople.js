@@ -38,7 +38,18 @@
  * @return {Set}
  */
 function setOfPeople(people) {
-  // write code here
+  const stayedAtQueue = new Set();
+
+  people.forEach(human => {
+    const calledTimes = people.filter(number => human === number).length;
+    const isStayed = (calledTimes % 2 !== 0) || (calledTimes === 1);
+
+    if (isStayed) {
+      stayedAtQueue.add(human);
+    }
+  });
+
+  return stayedAtQueue;
 }
 
 module.exports = setOfPeople;
